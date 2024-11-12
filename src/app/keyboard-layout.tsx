@@ -45,18 +45,53 @@ export default function KeyboardLayout({ layout, pressedKeys }: KeyboardLayoutPr
     }
     
     switch (key.width) {
-      case 20: return baseClass + 'w-5 h-10'
-      case 40: return baseClass + 'w-10 h-10'
-      case 60: return baseClass + 'w-[3.75rem] h-10'
-      case 80: return baseClass + 'w-20 h-10'
-      case 100: return baseClass + 'w-[6.25rem] h-10'
-      case 120: return baseClass + 'w-[7.5rem] h-10'
-      case 140: return baseClass + 'w-[8.75rem] h-10'
-      case 220: return baseClass + 'w-[13.75rem] h-10'
-      case 240: return baseClass + 'w-60 h-10'
-      case 260: return baseClass + 'w-[16.25rem] h-10'
-      default: return baseClass + 'w-10 h-10'
+      case 20: baseClass += 'w-5 h-10'
+      break;
+      case 40: baseClass += 'w-10 h-10'
+      break;
+      case 60: baseClass += 'w-[3.75rem] h-10'
+      break;
+      case 80: baseClass += 'w-20 h-10'
+      break;
+      case 100: baseClass += 'w-[6.25rem] h-10'
+      break;
+      case 120: baseClass += 'w-[7.5rem] h-10'
+      break;
+      case 140: baseClass += 'w-[8.75rem] h-10'
+      break;
+      case 220: baseClass += 'w-[13.75rem] h-10'
+      break;
+      case 240: baseClass += 'w-60 h-10'
+      break;
+      case 260: baseClass += 'w-[16.25rem] h-10' 
+      break;
+      default: baseClass += 'w-10 h-10'
+      break;
     }
+    if (layout.name === '65%') {
+          baseClass += ' mr-0.5'
+    }else if (layout.name === "60%"){
+      switch (key.code) {
+        case 'Space':
+          baseClass += ' w-[17.75rem]'
+          break;
+        case 'Enter':
+          baseClass += ' w-[6.25rem]'
+          break;
+        case 'ShiftRight':
+          baseClass += ' w-[7.75rem]'
+          break;
+        case 'Backslash':
+          baseClass += ' w-[5rem]'
+          break;
+        case 'Backspace':
+          baseClass += ' w-[6rem]'
+          break;
+        default:
+          break;
+      }
+    }
+    return baseClass
   }
 
   return (
