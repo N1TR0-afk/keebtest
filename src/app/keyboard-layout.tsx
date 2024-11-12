@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { KeybLayout as KeyboardLayoutType } from './types'
 import { Key } from 'react'
-
+import { Key as Key2 } from "./types";
 interface KeyboardLayoutProps {
   layout: KeyboardLayoutType | undefined
   pressedKeys: Set<string>
@@ -33,7 +33,7 @@ export default function KeyboardLayout({ layout, pressedKeys }: KeyboardLayoutPr
     }
   }
 
-  const getKeyClass = (key: any) => {
+  const getKeyClass = (key: Key2):string => {
     let baseClass = 'rounded-md flex items-center justify-center text-xs font-medium transition-colors duration-150 '
     
     if (pressedKeys.has(key.code)) {
@@ -62,7 +62,7 @@ export default function KeyboardLayout({ layout, pressedKeys }: KeyboardLayoutPr
   return (
     <div className={`bg-gray-900 rounded-xl p-4 shadow-lg inline-block ${getKeyboardClass()}`}>
       <div className="flex flex-col h-full gap-1">
-        {layout.rows.map((row: any[], rowIndex: Key | null | undefined) => (
+        {layout.rows.map((row: Key2[], rowIndex: Key | null | undefined) => (
           <div key={rowIndex} className="flex gap-1">
             {row.map((key) => (
               <motion.div
