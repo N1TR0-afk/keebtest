@@ -23,7 +23,7 @@ export default function KeyboardLayout({ layout, pressedKeys }: KeyboardLayoutPr
       case '80% TKL':
         return 'w-[850px] h-[300px]'
       case '75%':
-        return 'w-[800px] h-[300px]'
+        return 'w-[780px] h-[300px]'
       case '65%':
         return 'w-[750px] h-[255px]'
       case '60%':
@@ -90,9 +90,159 @@ export default function KeyboardLayout({ layout, pressedKeys }: KeyboardLayoutPr
         default:
           break;
       }
-    }
+    }else if (layout.name === '75%'){
+      switch (key.code) {
+        case 'Enter':
+          baseClass += ' w-[7.5rem]'
+          break;
+        case 'Space':
+          baseClass += ' w-[16rem]'
+          break;
+        case 'ShiftRight':
+          baseClass += ' w-[7.5rem]'
+          break;
+        case 'Backslash':
+          baseClass += ' w-[5.70rem]'
+          break;
+        case 'CapsLock':
+          baseClass += ' w-[6rem]'
+          break;
+        case 'ShiftLeft':
+          baseClass += ' w-[7.5rem]'
+          break;
+        case 'Tab':
+          baseClass += ' w-[5rem]'
+          break;
+        case 'Backquote':
+          baseClass += ' w-[4rem]'
+          break;
+        case 'Backspace':
+          baseClass += ' w-[6.70rem]' 
+          break;
+        case 'Escape':
+          baseClass += ' mr-[2.1rem]'
+          break;
+        case 'F4':
+          baseClass += ' mr-[2.1rem]'
+          break;
+        case 'F8':
+          baseClass += ' mr-[2.1rem]'
+          break;
+        case 'Delete':
+          baseClass += ' ml-[2.1rem]'
+          break;
+        default:
+          break;
+      }
+    }else if (layout.name === '80% TKL') {
+      switch (key.code) {
+        case 'Enter':
+          baseClass += ' w-[6.75rem]'
+          break;
+        case 'Space':
+          baseClass += ' w-[22rem]'
+          break;
+        case 'ShiftRight':
+          baseClass += ' w-[8rem]'
+          break;
+        case 'Backslash':
+          baseClass += ' w-[5.80rem]'
+          break;
+        case 'CapsLock':
+          baseClass += ' w-[6rem]'
+          break;
+        case 'ShiftLeft':
+          baseClass += ' w-[7.5rem]'
+          break;
+        case 'Tab':
+          baseClass += ' w-[5rem]'
+          break;
+        case 'Backquote':
+          baseClass += ' w-[3.5rem]'
+          break;
+        case 'Backspace':
+          baseClass += ' w-[7rem]' 
+          break;
+        case 'Escape':
+          baseClass += ' mr-[2.1rem]'
+          break;
+        case 'F4':
+          baseClass += ' mr-[2.1rem]'
+          break;
+        case 'F8':
+          baseClass += ' mr-[2.1rem]'
+          break;
+        // case 'Delete':
+          // baseClass += ' ml-[2.1rem]'
+        //   break;
+        case 'PrintScreen':
+          baseClass += ' ml-[2rem]'
+          break;
+        case 'ArrowUp': baseClass += ' ml-[2.6rem]';break;
+        default:
+          break;
+      }
+    }else if(layout.name === '96%/90%') {
+      switch (key.code) {
+        case 'NumpadEnter':
+          if (key.label === '') {
+            baseClass += ' rounded-none rounded-b-lg'
+          }else{
+            baseClass += ' text-align: end; pt-[2rem] rounded-none rounded-t-lg'
+          }
+          break;
+        case 'NumpadAdd':
+          if (key.label === '') {
+            baseClass += ' rounded-none rounded-b-lg'
+          }else{
+            baseClass += ' text-align: end; pt-[2rem] rounded-none rounded-t-lg'
+          }
+          break;
+        case 'Tab':
+          baseClass += ' w-[3.95rem]'
+          break;
+        case 'Backspace':
+          baseClass += ' w-[5.15rem]'
+          break;
+        case 'ShiftRight':
+          baseClass += ' w-[4.95rem]'
+          break;
+        case 'ShiftLeft':
+          baseClass += ' w-[5.5rem]'
+          break;
+        case 'CapsLock':
+          baseClass += ' w-[4.5rem]'
+          break;
+        case 'Enter':
+          baseClass += ' w-[5.95rem]'
+          break;
+        case 'Numpad0':
+          baseClass += ' w-[2.5rem]'
+          break;
+        case 'ControlLeft':
+          baseClass += ' w-[3rem]';
+          break;
+        case 'MetaLeft':
+          baseClass += ' w-[3.2rem]';
+          break;
+        case 'AltLeft':
+          baseClass += ' w-[3.25rem]'
+          break; 
+        case 'AltRight':
+          baseClass += ' w-[3.25rem]'
+          break;
+        case 'Fn':
+          baseClass += ' w-[3.25rem]'
+        break;
+        case 'ControlRight':
+          baseClass += ' w-[3rem]'
+        break;
+        default:
+          break;
+      }
+}
     return baseClass
-  }
+}
 
   return (
     <div className={`bg-gray-900 rounded-xl p-4 shadow-lg inline-block ${getKeyboardClass()}`}>

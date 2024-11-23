@@ -315,6 +315,7 @@ const compact96: KeybLayout = {
       { label: '4', code: 'Numpad4', width: 40 },
       { label: '5', code: 'Numpad5', width: 40 },
       { label: '6', code: 'Numpad6', width: 40 },
+      { label: '', code: 'NumpadAdd', width: 40, height: 84 },
     ],
     // Shift row
     [
@@ -329,7 +330,8 @@ const compact96: KeybLayout = {
       { label: ',', code: 'Comma', width: 40 },
       { label: '.', code: 'Period', width: 40 },
       { label: '/', code: 'Slash', width: 40 },
-      { label: 'Shift', code: 'ShiftRight', width: 100 },
+      { label: 'Shift', code: 'ShiftRight', width: 10 },
+      { label: '↑', code: 'ArrowUp', width: 40 },
       { label: '1', code: 'Numpad1', width: 40 },
       { label: '2', code: 'Numpad2', width: 40 },
       { label: '3', code: 'Numpad3', width: 40 },
@@ -337,15 +339,19 @@ const compact96: KeybLayout = {
     ],
     // Bottom row
     [
-      { label: 'Ctrl', code: 'ControlLeft', width: 60 },
-      { label: 'Win', code: 'MetaLeft', width: 60 },
-      { label: 'Alt', code: 'AltLeft', width: 60 },
+      { label: 'Ctrl', code: 'ControlLeft', width: 50 },
+      { label: 'Win', code: 'MetaLeft', width: 50 },
+      { label: 'Alt', code: 'AltLeft', width: 50 },
       { label: 'Space', code: 'Space', width: 240 },
-      { label: 'Alt', code: 'AltRight', width: 60 },
-      { label: 'Fn', code: 'Fn', width: 60 },
-      { label: 'Ctrl', code: 'ControlRight', width: 60 },
+      { label: 'Alt', code: 'AltRight', width: 50 },
+      { label: 'Fn', code: 'Fn', width: 50 },
+      { label: 'Ctrl', code: 'ControlRight', width: 50 },
+      { label: '←', code: 'ArrowLeft', width: 40 },
+      { label: '↓', code: 'ArrowDown', width: 40 },
+      { label: '→', code: 'ArrowRight', width: 40 },
       { label: '0', code: 'Numpad0', width: 80 },
       { label: '.', code: 'NumpadDecimal', width: 40 },
+      { label: '', code: 'NumpadEnter', width: 40, height: 84 }
     ],
   ],
 }
